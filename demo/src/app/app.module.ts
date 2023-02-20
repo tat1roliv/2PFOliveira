@@ -14,6 +14,10 @@ import { MaterialModule } from './material.module';
 import { StudentNamePipe } from './pipes/student-name.pipe';
 import { TitleSizeDirective } from './directives/title-size.directive';
 
+import { NotFoundComponent } from './core/components/not-found/not-found.component';
+import { HomeComponent } from './core/components/home/home.component';
+import { LoginComponent } from './core/components/login/login.component';
+
 
 
 @NgModule({
@@ -25,6 +29,9 @@ import { TitleSizeDirective } from './directives/title-size.directive';
         FormStudentComponent,
         StudentNamePipe,
         TitleSizeDirective,
+        NotFoundComponent,
+        HomeComponent,
+        LoginComponent,
 
     ],
     providers: [],
