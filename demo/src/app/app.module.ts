@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { FormStudentComponent } from './components/form-student/form-student.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { MaterialModule } from './material.module';
@@ -26,7 +25,6 @@ import { LoginComponent } from './core/components/login/login.component';
         ToolbarComponent,
         NavbarComponent,
         FooterComponent,
-        FormStudentComponent,
         StudentNamePipe,
         TitleSizeDirective,
         NotFoundComponent,
