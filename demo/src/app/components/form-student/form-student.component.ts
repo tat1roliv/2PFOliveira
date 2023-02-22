@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup , Validators} from '@angular/forms';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-form-student',
+  templateUrl: './form-student.component.html',
+  styleUrls: ['./form-student.component.css']
 })
-export class LoginComponent {
+export class FormStudentComponent {
   formSubscription: FormGroup;
 
   constructor(){
@@ -24,3 +24,9 @@ export class LoginComponent {
     console.log('login', this.formSubscription);
   }
 }
+
+
+
+
+
+
