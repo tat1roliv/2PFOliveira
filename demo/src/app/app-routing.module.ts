@@ -5,10 +5,14 @@ import { FormStudentComponent } from './components/form-student/form-student.com
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
-  {path: 'students' , component: StudentsTempComponent},
+  {path: 'students' , children: [
+    {path: 'list', component: StudentsTempComponent}
+  ]},
   {path: 'login' , component: FormStudentComponent},
-  {path: '' , redirectTo: 'students', pathMatch: 'full'},
+  //{path: 'students' , component: StudentsTempComponent},
+  //{path: '' , redirectTo: 'students', pathMatch: 'full'},
   {path: '**', component: NotFoundComponent} ,
+
 ];
 
 @NgModule({

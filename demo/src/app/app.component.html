@@ -3,7 +3,17 @@
     <div class="container">
       <div class="row align-items-start justify-content-center">
         <div class="col-12 col-md-3 my-5 mx-4 d-flex flex-column align-items-start bg-light navbar-content">
-          <app-navbar></app-navbar>
+          <ul class="nav flex-column menu-edit">
+            <li class="nav-item ">
+              <a class="nav-link" (click)="redigirInicio()">Login</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link active" routerLink="students/list">Students list</a>
+            </li>
+            <!--li class="nav-item">
+              <a class="nav-link " routerLink="students/add">Add student</a>
+            </!--li-->
+          </ul>
         </div>
         <div class="col-12 col-md-8 offset-1 my-5 mx-auto">
           <router-outlet></router-outlet>

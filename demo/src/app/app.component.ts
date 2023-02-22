@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Student } from './models/student';
 import { StudentService } from './services/student.service';
 
@@ -10,6 +11,13 @@ import { StudentService } from './services/student.service';
 export class AppComponent {
   title = 'demo';
 
-  constructor( public studentService: StudentService ){ }
+  constructor(
+    public studentService: StudentService,
+    public router: Router,
+     ){ }
+
+  redigirInicio(){
+    this.router.navigate(['login'] )
+  }
 
 }
