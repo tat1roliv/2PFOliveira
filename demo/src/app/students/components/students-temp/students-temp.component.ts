@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
-import { Student } from '../../models/student';
-import { StudentService } from '../../services/student.service';
+import { Student } from '../../../models/student';
+import { StudentService } from '../../../services/student.service';
 import { Input, Output , EventEmitter } from '@angular/core';
 
 @Component({
@@ -55,5 +55,5 @@ export class StudentsTempComponent implements OnInit, OnDestroy {
     this.suscripcion.unsubscribe();
   }
 
-  
+
 }

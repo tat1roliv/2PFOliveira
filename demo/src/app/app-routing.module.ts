@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { StudentsTempComponent } from './components/students-temp/students-temp.component';
+import { StudentsTempComponent } from './students/components/students-temp/students-temp.component';
 import { FormStudentComponent } from './components/form-student/form-student.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { StudentsAddComponent } from './components/students-add/students-add.component';
+import { StudentsAddComponent } from './students/components/students-add/students-add.component';
+import { StudentsEditarComponent } from './students/students-editar/students-editar.component';
 
 const routes: Routes = [
   {path: 'students' , children: [
     {path: 'list', component: StudentsTempComponent},
     {path: 'add', component: StudentsAddComponent},
+    {path: 'edit', component: StudentsEditarComponent},
   ]},
   {path: 'login' , component: FormStudentComponent},
   {path: 'home' , component: HomeComponent},
