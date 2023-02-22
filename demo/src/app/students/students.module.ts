@@ -4,6 +4,7 @@ import { StudentsAddComponent } from './components/students-add/students-add.com
 import { StudentsTempComponent } from './components/students-temp/students-temp.component';
 import { StudentsEditarComponent } from './students-editar/students-editar.component';
 import { MaterialModule } from '../material.module';
+import { StudentsService } from '../students/services/students.service';
 
 
 
@@ -16,6 +17,9 @@ import { MaterialModule } from '../material.module';
   imports: [
     CommonModule,
     MaterialModule
+  ],
+  providers: [
+    StudentsService
   ]
 })
 export class StudentsModule { }
