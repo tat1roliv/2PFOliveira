@@ -4,10 +4,12 @@ import { StudentsTempComponent } from './components/students-temp/students-temp.
 import { FormStudentComponent } from './components/form-student/form-student.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { StudentsAddComponent } from './components/students-add/students-add.component';
 
 const routes: Routes = [
   {path: 'students' , children: [
-    {path: 'list', component: StudentsTempComponent}
+    {path: 'list', component: StudentsTempComponent},
+    {path: 'add', component: StudentsAddComponent},
   ]},
   {path: 'login' , component: FormStudentComponent},
   {path: 'home' , component: HomeComponent},
