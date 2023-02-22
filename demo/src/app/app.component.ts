@@ -17,7 +17,7 @@ export class AppComponent {
      ){ }
 
   redigirInicio(){
-    this.router.navigate(['login'] )
+    this.router.navigate(['home'] )
   }
 
 }

@@ -3,14 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { StudentsTempComponent } from './components/students-temp/students-temp.component';
 import { FormStudentComponent } from './components/form-student/form-student.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {path: 'students' , children: [
     {path: 'list', component: StudentsTempComponent}
   ]},
   {path: 'login' , component: FormStudentComponent},
-  //{path: 'students' , component: StudentsTempComponent},
-  //{path: '' , redirectTo: 'students', pathMatch: 'full'},
+  {path: 'home' , component: HomeComponent},
+  {path: '' , redirectTo: 'home', pathMatch: 'full'},
   {path: '**', component: NotFoundComponent} ,
 
 ];
