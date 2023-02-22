@@ -14,6 +14,7 @@ import { MaterialModule } from './material.module';
 import { StudentNamePipe } from './pipes/student-name.pipe';
 import { TitleSizeDirective } from './directives/title-size.directive';
 import { StudentsTempComponent } from './components/students-temp/students-temp.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 
@@ -27,6 +28,7 @@ import { StudentsTempComponent } from './components/students-temp/students-temp.
         StudentNamePipe,
         TitleSizeDirective,
         StudentsTempComponent,
+        NotFoundComponent,
 
     ],
     providers: [],
