@@ -6,7 +6,7 @@ import { HomeComponent } from './core/home/home.component';
 import { NotFoundComponent } from './core/not-found/not-found.component';
 import { StudentsTempComponent } from './students/components/students-temp/students-temp.component';
 import { StudentsAddComponent } from './students/components/students-add/students-add.component';
-import { StudentsEditarComponent } from './students/students-editar/students-editar.component';
+import { StudentsEditarComponent } from './students/components/students-editar/students-editar.component';
 
 const routes: Routes = [
   {path: 'students' , children: [
