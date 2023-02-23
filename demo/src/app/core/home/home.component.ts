@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from 'express';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,5 +8,8 @@ import { Router } from 'express';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  constructor(){}
+  constructor(
+    //public router = Router
+  ){}
+
 }
