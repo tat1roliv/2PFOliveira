@@ -53,25 +53,35 @@ export class StudentsService {
   }
 
 
-  getSudentsObservable(): Observable<Student[]>{
+  getStudentsObservable(): Observable<Student[]>{
     return this.students$.asObservable();
   }
 
-  addStudent(student: Student){
+  addStudent(student: Student): void{
     this.students.push(student);
     this.students$.next(this.students);
     console.log('added from service', this.students);
   }
 
-  getSudentsPromise(): Promise<Student[]>{
-    return new Promise((resolve, reject) => {
-      if(this.students.length > 0){
-        resolve(this.students);
-      }else{
-        reject([]);
-      }
-    });
+  editStudent(student: Student): void {
+    let indice = this.students.findIndex((s: Student) => s.id_ === student.id_);
+
+    if(indice > -1){
+      this.students[indice] = student;
+      this.students$.next(this.students);
+    }
   }
+
+  removeStudent(student: Student): void {
+    let indice = this.students.findIndex((s: Student) => s.id_ === student.id_);
+
+    if(indice > -1){
+      this.students.splice(indice, 1);
+      this.students$.next(this.students);
+    }
+  }
+
+
 
 }
 

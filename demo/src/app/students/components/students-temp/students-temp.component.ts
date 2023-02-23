@@ -1,8 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { Student } from '../../../models/student';
-import { StudentService } from '../../../services/student.service';
+//import { StudentService } from '../../../services/student.service';
 import { Input, Output , EventEmitter } from '@angular/core';
+
+import { StudentsService } from '../../services/students.service';
 
 @Component({
   selector: 'app-students-temp',
@@ -18,10 +20,12 @@ export class StudentsTempComponent implements OnInit, OnDestroy {
 
  suscripcion!: Subscription;
 
-  constructor(public studentService: StudentService) {
+  constructor(
+    public studentsService: StudentsService
+    ) {
     //this.studentsTemp = this.studentService.students;
   }
-
+/*
   @Output() outStudent: EventEmitter<Student> = new EventEmitter<Student>();
 
   id_!: string;
@@ -29,7 +33,8 @@ export class StudentsTempComponent implements OnInit, OnDestroy {
   lastName!: string;
   email!: string;
   course!: string;
-
+*/
+  /*
   addStudentTemp(){
     let newStudent: Student = {
       id_: this.id_,
@@ -41,18 +46,23 @@ export class StudentsTempComponent implements OnInit, OnDestroy {
     //console.log('add student' , newStudent);
     this.studentService.addStudent(newStudent);
   }
-
+*/
 
   ngOnInit() {
+    /*
     this.studentsTemp$ = this.studentService.getSudentsObservable();
     this.suscripcion = this.studentsTemp$.subscribe((students: Student[])=> {
       this.studentsTemp = students;
     });
+  */
 
+    this.studentsTemp$ = this.studentsService. getStudentsObservable();
   }
 
   ngOnDestroy() {
+    /*
     this.suscripcion.unsubscribe();
+    */
   }
 
 
