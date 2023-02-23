@@ -17,52 +17,24 @@ export class StudentsTempComponent implements OnInit, OnDestroy {
  @Input() studentsTemp: Student[] = [];
 
  studentsTemp$!: Observable<Student[]>;
-
  suscripcion!: Subscription;
 
   constructor(
     public studentsService: StudentsService
     ) {
-    //this.studentsTemp = this.studentService.students;
   }
-/*
-  @Output() outStudent: EventEmitter<Student> = new EventEmitter<Student>();
 
-  id_!: string;
-  name!: string;
-  lastName!: string;
-  email!: string;
-  course!: string;
-*/
-  /*
-  addStudentTemp(){
-    let newStudent: Student = {
-      id_: this.id_,
-      name: this.name,
-      lastName: this.lastName,
-      email: this.email,
-      course: this.course,
-    }
-    //console.log('add student' , newStudent);
-    this.studentService.addStudent(newStudent);
-  }
-*/
 
   ngOnInit() {
-    /*
-    this.studentsTemp$ = this.studentService.getSudentsObservable();
-    this.suscripcion = this.studentsTemp$.subscribe((students: Student[])=> {
-      this.studentsTemp = students;
-    });
-  */
-
     this.studentsTemp$ = this.studentsService. getStudentsObservable();
   }
 
+  removeStudent(student: Student): void {
+    this.studentsService.removeStudent(student);
+  }
+
   ngOnDestroy() {
-    /*
-    this.suscripcion.unsubscribe();
-    */
+
   }
 
 
