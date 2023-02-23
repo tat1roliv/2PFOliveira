@@ -1,4 +1,4 @@
-<!--form-- [formGroup]="formStudents" (ngSubmit)="studentsEdit()">
+<form [formGroup]="formStudents" (ngSubmit)="studentsEdit()">
   <div class="row">
     <mat-form-field class="col-12">
       <mat-label>Id</mat-label>
@@ -29,7 +29,7 @@
         <button mat-raised-button type="submit">Edit</button>
     </div>
   </div>
-</!form-->
+</form>
 
 <form [formGroup]="formStudents" (ngSubmit)="studentsEdit()">
     <div class="mb-2">
@@ -42,7 +42,7 @@
     </div>
     <div class="mb-2">
       <label class="mb-1" for="lastName-input">Last Name:</label>
-      <input value="" type="text" id="lastName-input" name="lastName-input" class="form-control" p formControlName="lastName">
+      <input value="" type="text" id="lastName-input" name="lastName-input" class="form-control"  formControlName="lastName">
     </div>
     <div class="mb-2">
       <label class="mb-1" for="email-input">E-mail:</label>
@@ -53,6 +53,6 @@
       <input value="" type="text" id="course-input" name="course-input" class="form-control"  formControlName="course">
     </div>
     <div class="mt-4 mb-2">
-        <button type="submit" class="btn btn-primary px-5">Send</button>
+        <button type="submit" class="btn btn-primary px-5">Save</button>
     </div>
 </form>

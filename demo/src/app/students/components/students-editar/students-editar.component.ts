@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { StudentsService } from '../../services/students.service';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { Student } from 'src/app/models/student';
 
 
 @Component({
@@ -37,7 +38,18 @@ export class StudentsEditarComponent implements OnInit{
   }
 
   studentsEdit(){
+    let student: Student = {
+      id_: this.formStudents.value.id_,
+      name: this.formStudents.value.name,
+      lastName: this.formStudents.value.lastName,
+      email: this.formStudents.value.email,
+      course: this.formStudents.value.course,
+    }
 
+    this.studentsService.editStudent(student);
+    this.router.navigate(['students/edit']);
   }
 
 }
+
+
