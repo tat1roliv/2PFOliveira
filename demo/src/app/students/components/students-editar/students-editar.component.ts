@@ -27,11 +27,11 @@ export class StudentsEditarComponent implements OnInit{
       console.log(parametros);
 
       this.formStudents = new FormGroup({
-        id_: new FormControl(parametros.get('id_')),
-        name: new FormControl(parametros.get('name')),
-        lastName: new FormControl(parametros.get('lastName')),
-        email: new FormControl(parametros.get('email')),
-        course: new FormControl(parametros.get('course')),
+        id_: new FormControl(parametros.get('id_'|| '')),
+        name: new FormControl(parametros.get('name' || '')),
+        lastName: new FormControl(parametros.get('lastName'|| '')),
+        email: new FormControl(parametros.get('email'|| '')),
+        course: new FormControl(parametros.get('course'|| '')),
       })
     })
 
@@ -46,8 +46,8 @@ export class StudentsEditarComponent implements OnInit{
       course: this.formStudents.value.course,
     }
 
-    this.studentsService.editStudent(student);
-    this.router.navigate(['students/edit']);
+    this.studentsService.editServStudent(student);
+    this.router.navigate(['students/list']);
   }
 
 }

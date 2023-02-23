@@ -63,7 +63,7 @@ export class StudentsService {
     console.log('added from service', this.students);
   }
 
-  editStudent(student: Student): void {
+  editServStudent(student: Student): void {
     let indice = this.students.findIndex((s: Student) => s.id_ === student.id_);
 
     if(indice > -1){
