@@ -21,9 +21,7 @@ import { HomeComponent } from './core/home/home.component';
 
 import { StudentsAddComponent } from './students/components/students-add/students-add.component';
 import { StudentsTempComponent } from './students/components/students-temp/students-temp.component';
-
-
-
+import { StudentsEditarComponent } from './students/components/students-editar/students-editar.component';
 
 
 
@@ -40,6 +38,7 @@ import { StudentsTempComponent } from './students/components/students-temp/stude
         NotFoundComponent,
         HomeComponent,
         StudentsAddComponent,
+        StudentsEditarComponent,
        //StudentsModule
 
     ],
