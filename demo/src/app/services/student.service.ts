@@ -59,11 +59,6 @@ constructor() {
     ).subscribe((student: Student) => console.log(' from pipe observable en student.service, filter student.name === Ada', student));
 }
 
-/*
-getSudents(): Array<Student>{
-  return this.students;
-}
-*/
 
 getSudentsObservable(): Observable<Student[]>{
   return this.students$.asObservable();

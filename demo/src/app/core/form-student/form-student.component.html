@@ -3,14 +3,14 @@
 
 
 <div class="row align-items-center justify-content-center">
-        <div class="col-12 col-md-5 d-flex flex-column align-items-start ">
-          <h1 class="">Learn to code</h1>
-          <p class=""><strong>Build projects — for free.</strong> <br/>Learn the technical skills to get the job you want.</p>
-      </div>
-      <div class="col-12 col-md-6 col-xl-5 offset-xl-1">
+      <!--div class="col-12 col-md-5 d-flex flex-column align-items-start ">
+        <h1 class="">Learn to code</h1>
+        <p class=""><strong>Build projects — for free.</strong> <br/>Learn the technical skills to get the job you want.</p>
+      </!--div-->
+      <div class="col-12 col-md-10">
           <div class="ic-dynamic-form-container px-4">
               <h3 class="ic-form-title">Join us!</h3>
-              
+
               <form class="ic-dynamic-form"  [formGroup]="formSubscription" (ngSubmit)="handleSubscription()">
                 <div class="mb-2">
                     <label class="mb-1" for="firstname-input">Name:</label>
@@ -37,11 +37,9 @@
                     <div class="invalid" *ngIf="formSubscription.controls['email_'].dirty && formSubscription.controls['email_'].errors?.['email']">invalid e-mail</div>
                 </div>
                 <div class="mt-4 mb-2">
-                    <button type="submit" class="btn w-100" [disabled]="formSubscription.invalid">Send</button>
+                    <button type="submit" class="btn px-4" [disabled]="formSubscription.invalid">Send</button>
                 </div>
               </form>
-
-
           </div>
       </div>
 </div>

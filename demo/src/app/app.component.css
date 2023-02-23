@@ -57,3 +57,7 @@ h3.ic-form-title{
 .warning{
   color: tomato;
 }
+
+.btn.btn-edit{
+  background-color: var(--color-contrast);
+}

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup , Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-student',
@@ -9,7 +10,9 @@ import { FormControl, FormGroup , Validators} from '@angular/forms';
 export class FormStudentComponent {
   formSubscription: FormGroup;
 
-  constructor(){
+  constructor(
+    public router: Router,
+  ){
     let controles: any = {
       name_: new FormControl('', [ Validators.required , Validators.minLength(2) ]),
       lastName_: new FormControl('', [ Validators.required, Validators.minLength(3)   ]),
@@ -17,11 +20,11 @@ export class FormStudentComponent {
     }
 
     this.formSubscription = new FormGroup(controles);
-
   }
 
   handleSubscription(){
     console.log('login', this.formSubscription);
+    this.router.navigate(['/students/list']);
   }
 }
 
